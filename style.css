@@ -49,8 +49,10 @@ body {
 .search button img {
     width: 13px;
 }
-.weather-text h2{
+.weather-text{
     margin-top: 30px;
+}
+.weather-text h2{
     font-weight: 500;
 }
 .weather {
