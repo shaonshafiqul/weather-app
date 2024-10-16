@@ -1,12 +1,11 @@
 function getWeather() {
-    const city = document
-        .getElementById('city');
-    if (city.value== '') {
+    const city = document.getElementById('city');
+    if (city.value == '') {
         alert('Please enter a city');
         return;
     }
     checkWeather(city.value);
-        city.value= "";
+    city.value = "";
 }
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 const apiKey = 'c3e5729bc67a745666fdaa8dc7fd7197';
@@ -125,7 +124,10 @@ function checkWeather(city) {
                 .querySelector('.weather')
                 .style
                 .display = 'block';
-            console.log(data)
+            document
+                .querySelector('.weather-text')
+                .style
+                .display = 'none';
         })
         .catch(error => {
             document
@@ -134,6 +136,10 @@ function checkWeather(city) {
                 .display = 'block';
             document
                 .querySelector('.weather')
+                .style
+                .display = 'none';
+            document
+                .querySelector('.weather-text')
                 .style
                 .display = 'none';
         })
